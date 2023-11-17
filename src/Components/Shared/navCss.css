@@ -1,0 +1,42 @@
+.navSet {
+    display: flex;
+    justify-content: space-between;
+    padding :0.8rem 0;
+  }
+  
+  .navImg {
+    width: 30px;
+    height: 30px;
+    margin-left: 9px;
+  }
+  
+  .navLogo {
+    width: 110px;
+    height: 30px;
+  }
+  
+  .navSearch {
+    margin-left: 50px;
+    width:250%;
+  }
+  .navSearchImg{
+    width: 30px;
+    height: 35px;
+    border-radius:40px;
+  }
+  
+  .navUl{
+    display:flex;
+    gap:1.8rem;
+    padding: 0;
+  }
+
+  .navUlSearch{
+    display:flex;
+  }
+
+  .navList {
+    list-style: none;
+  }
+  
+  
