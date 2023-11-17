@@ -9,15 +9,21 @@
     height: 30px;
     margin-left: 9px;
   }
+  .navImg:hover{
+    background-color: rgb(237, 227, 227);
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
   .navLogo {
     width: 110px;
-    height: 30px;
+    height: 25px;
   }
   
   .navSearch {
     margin-left: 50px;
     width:250%;
+    border-radius: 30px;
   }
   .navSearchImg{
     width: 30px;

@@ -1,9 +1,15 @@
+import Home from "./Components/Home/home.js"
 import Header from "./Components/Shared/navbar.js"
+import { Provider } from "react-redux"
+import store from "./utils/store.js"
+
 const App =()=>{
     return (
         <>
-        <Header />
-        <h1>This is app.js</h1>
+        <Provider store={store}>
+            <Header />
+            <Home />
+        </Provider>
         </>
     )
 }
