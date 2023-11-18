@@ -35,7 +35,15 @@ const SideBar = () => {
                         <li>Learning</li>
                         <li>Fashion</li>
                         <li>Beauty</li>
+                    </ul> 
+                    <hr />                   
+                    <ul className="sidebarList">
+                        <li>Setting</li>
+                        <li>Report History</li>
+                        <li>Help</li>
+                        <li>Send Feedback</li>
                     </ul>
+
 
                 </div>
         </>
