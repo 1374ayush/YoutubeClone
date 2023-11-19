@@ -1,11 +1,14 @@
 .layout{
     display:flex;
+    /* background: rgba(226, 224, 224, 0.39) */
 }
 .sidebar{
-    width:20%;
+    width:210px;
     height:515px;
     overflow: scroll;
-    z-index: 10;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
 }
 
 .sidebarList{
@@ -17,7 +20,7 @@
 }
 
 .buttonContainer{
-    width:100%;
+    
     overflow-x: auto; /* Use 'scroll' if you always want a scrollbar */
     white-space: nowrap; 
 }

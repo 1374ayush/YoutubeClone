@@ -18,19 +18,19 @@ const Header = () => {
 
   return (
     <>
-      <nav className='navSet'>
+      <div className='navSet mx-3'>
         <ul className='navUl'> 
             <img src={HamBurIcon} className='navImg' onClick={()=>toggleMenuHandler()}/> 
-             <img src={youtubeLogo} className='navLogo' />
-            <li className='navList ml-4 rounded-lg'> <input type="text" className="navSearch"/></li>
+             <a href='#'><img src={youtubeLogo} className='navLogo' /></a>
+            <li className='navList ml-4 rounded-lg'> <input type="text" className="navSearch" placeholder='Search'/></li>
             {/* <li className='navList ml-4 rounded-lg'> <img src={search} className='navImg'/> </li> */}
           </ul>
 
           <ul className='navUl'> 
-          <li className='navList'> <img src={person} className='navImg mx-3'/></li>
+          <li className='navList'> <img src={person} className='navImg'/></li>
           </ul>
 
-      </nav>
+      </div>
     </>
   )
 }

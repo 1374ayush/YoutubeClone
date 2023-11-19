@@ -1,14 +1,14 @@
 .navSet {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     padding :0.8rem 0;
   }
   
   .navImg {
     width: 30px;
     height: 30px;
-    margin-left: 9px;
   }
+  
   .navImg:hover{
     background-color: rgb(237, 227, 227);
     border-radius: 5px;
@@ -24,6 +24,8 @@
     margin-left: 50px;
     width:250%;
     border-radius: 30px;
+    border:1px solid rgba(128, 128, 128, 0.55);
+    padding:6px 13px;
   }
   .navSearchImg{
     width: 30px;
@@ -44,5 +46,15 @@
   .navList {
     list-style: none;
   }
+
+  /* Responsiveness */
+@media screen and (max-width:1009px) {
+  .navSearch{
+    max-width:100%
+  }
+  .navSearch{
+    margin-left: 0;
+  }
+}
   
   

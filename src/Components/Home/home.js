@@ -3,6 +3,7 @@ import './homeCss.css'
 import SideBar from "./sidebar";
 import Button from "./button";
 import MainContainer from "./mainContainer";
+import Header from "../Shared/navbar";
 
 const Home = () =>{
     return (
