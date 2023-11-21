@@ -53,3 +53,11 @@
     height:50px;
     border-radius:30px;
 }
+
+.cardImg{
+    border-radius: 10px;
+}
+
+.channelTitle, .channelViews {
+    color:rgb(87, 84, 84)
+}

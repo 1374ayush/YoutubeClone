@@ -1,1 +1,2 @@
-const Youtube_API_Key = "GET https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=[YOUR_API_KEY]"
+
+export const YoutubeKey = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=35&regionCode=IN&key=AIzaSyDZTBFyS48lyonKL8WexzUOauAZGsjrngM";
