@@ -1,5 +1,6 @@
 import React from "react";
 import './homeCss.css'
+import { Link } from "react-router-dom";
 
 const VideoCard = ({info}) => {
     const {id, snippet} = info;
@@ -8,6 +9,7 @@ const VideoCard = ({info}) => {
     return (
         <>
             <div className="col-4 col-md-3 col-sm-6 mb-3" key={id} >
+            <Link to={'/watch/'+id} className="videoCard">
                 <div style={{border:'1px solid white'}} className="card">
                     <img src={thumbnails.medium.url} className="card-img-top cardImg" alt="..." />
                     <div className="card-body" style={{ padding: '10px' }}>
@@ -21,6 +23,7 @@ const VideoCard = ({info}) => {
                         </div>
                     </div>
                 </div>
+                </Link>
             </div>
         </>
     )
