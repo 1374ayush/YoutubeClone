@@ -4,13 +4,17 @@ import { Provider } from "react-redux"
 import store from "./utils/store.js"
 import { Outlet, createBrowserRouter } from "react-router-dom"
 import WatchPage from "./Components/WatchPage/watchPage.js"
+import SideBar from "./Components/Home/sidebar.js"
 
 const App =()=>{
     return (
         <>
         <Provider store={store}>
             <Header />
-            <Outlet />
+            <div>
+                <SideBar />
+                <Outlet />
+            </div>
         </Provider>
         </>
     )
@@ -22,7 +26,7 @@ export const appRouter=createBrowserRouter([
         element:<App />,
         children:[
             {path:'/', element:<Home />},
-            {path:'/watch/:id',element:<WatchPage />}
+            {path:'watch',element:<WatchPage />}
         ]
     }
 ])

@@ -19,6 +19,14 @@
     font-size:medium;
 }
 
+.sidebarListFalse{
+    list-style: none;
+}
+
+.homeButton{
+    font-size: 20px;
+}
+
 .buttonContainer{
     
     overflow-x: auto; /* Use 'scroll' if you always want a scrollbar */

@@ -1,6 +1,5 @@
 import HamBurIcon from '../../images/hamburIcon.png'
 import youtubeLogo from '../../images/youtube.png'
-import search from '../../images/search1.png'
 import './navCss.css'
 import person from '../../images/person.png'
 
@@ -23,6 +22,7 @@ const Header = () => {
             <img src={HamBurIcon} className='navImg' onClick={()=>toggleMenuHandler()}/> 
              <a href='#'><img src={youtubeLogo} className='navLogo' /></a>
             <li className='navList ml-4 rounded-lg'> <input type="text" className="navSearch" placeholder='Search'/></li>
+            
             {/* <li className='navList ml-4 rounded-lg'> <img src={search} className='navImg'/> </li> */}
           </ul>
 

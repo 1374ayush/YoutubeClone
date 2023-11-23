@@ -1,15 +1,14 @@
 import React from "react";
 import './homeCss.css'
-import SideBar from "./sidebar";
 import Button from "./button";
 import MainContainer from "./mainContainer";
-import Header from "../Shared/navbar";
+import MiniSideBar from "./miniSidebar";
 
 const Home = () =>{
     return (
         <>
             <div className="layout">
-                <SideBar />
+                <MiniSideBar />
                 <div className="rightSide mx-3">
                     <Button />
                     <MainContainer />

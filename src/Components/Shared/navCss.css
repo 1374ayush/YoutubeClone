@@ -9,6 +9,11 @@
     width: 30px;
     height: 30px;
   }
+
+  .navHamBur:hover{
+    background-color: rgb(237, 227, 227);
+    cursor: pointer;
+  }
   
   .navImg:hover{
     background-color: rgb(237, 227, 227);
