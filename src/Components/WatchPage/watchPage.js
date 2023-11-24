@@ -15,9 +15,9 @@ const WatchPage = () =>{
 
 return (
     <>
-    <div className="row">
+    <div className="row mx-3">
         <div className=" col-9 col-md-9 embed-responsive embed-responsive-16by9">
-        <iframe src={"https://www.youtube.com/embed/"+searchParams.get('v')} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen `` className="embed-responsive-item"></iframe>
+        <iframe src={"https://www.youtube.com/embed/"+searchParams.get('v')} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="embed-responsive-item" style={{width:'100%', height:'300%', borderRadius:20 }}></iframe>
         </div>
         <div className="col-3 col-md-3"></div>
     </div>
