@@ -12,7 +12,6 @@ const MainContainer = () => {
 
     useEffect(()=>{
         axios.get(YoutubeKey).then((response)=>{
-            console.log(response.data.items);
             setVideos(response.data.items);
         }).catch((err)=>{console.log(err)})
     },[])
@@ -21,7 +20,7 @@ const MainContainer = () => {
             <div className="mainContainer">
                 <div className="row">
                     {videos.map(items => (
-                        <VideoCard info={items} />
+                        <VideoCard info={items} key={items.id} />
                     ))}
                 </div>
             </div>
