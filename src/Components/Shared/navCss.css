@@ -28,7 +28,7 @@
   
   .navSearch {
     margin-left: 50px;
-    width:250%;
+    width:200%;
     border-radius: 30px;
     border:1px solid rgba(128, 128, 128, 0.55);
     padding:6px 13px;
@@ -53,6 +53,24 @@
     list-style: none;
   }
 
+  .searchSuggestion{
+    margin-left: 40px;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    width: 41%;
+    border-radius: 10px;
+    line-height: 2rem;
+  }
+  .searchSuggestionUl{
+    padding-right: 1rem;
+  }
+
+  .searchSuggestionLi{
+    list-style: none;
+  }
+
+
   /* Responsiveness */
 @media screen and (max-width:1009px) {
   .navSearch{
@@ -62,5 +80,6 @@
     margin-left: 0;
   }
 }
+
   
   
