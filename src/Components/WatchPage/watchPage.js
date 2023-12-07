@@ -57,7 +57,7 @@ const WatchPage = () => {
                     </div>
                 </div>
                 <div className="col-12 col-md-5 col-sm-12 comment-border">
-                    <h5>Comments:</h5>
+                    <h5>Suggestions:</h5>
                 </div>
             </div>
 
