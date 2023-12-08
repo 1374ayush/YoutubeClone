@@ -7,3 +7,26 @@
     height:50px;
     border-radius:30px;
 }
+
+.subscribeBtn{
+    background-color: black;
+    color: white;
+    padding: 5px 18px;
+    border-radius: 25px;
+}
+
+.shareBtn{
+    background-color: rgba(150, 150, 150, 0.438);
+    color:black;
+    padding: 5px 18px;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+
+.moreBtn{
+    background-color: rgba(150, 150, 150, 0.438);
+    color:black;
+    padding: 5px 18px;
+    border-radius: 50%;
+    border: 1px solid white;
+}

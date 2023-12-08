@@ -48,11 +48,19 @@ const WatchPage = () => {
 
                     <div className="row mt-3">
                         <div className="col-6 col-md-6">
-                            <img src={video1.snippet.thumbnails.default.url} className="channelLogo" />
-                            <span className="fs-5 mx-3 fw-medium">{video1.snippet.channelTitle}</span>
-                        </div>
-                        <div className="col-6 col-md-6">
 
+                            <div className="row">
+                                <div className="col-7 col-md-7">
+                                    <img src={video1.snippet.thumbnails.default.url} className="channelLogo" />
+                                    <span className="fs-5 mx-3 fw-medium">{video1.snippet.channelTitle}</span>
+                                </div>
+                                <div className="col-5 col-md-5"><button className="subscribeBtn mx-3">Subscribe</button></div>
+                            </div>
+
+                        </div>
+                        <div className="col-6 col-md-6" style={{ textAlign: 'right' }}>
+                            <button className="shareBtn">Share</button>
+                            <button className="moreBtn mx-3">...</button>
                         </div>
                     </div>
                 </div>
