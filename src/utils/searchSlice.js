@@ -5,10 +5,10 @@ const searchSlice = createSlice({
     initialState:{},
     reducers:{
         addCache: (state, action) =>{
-            state = {...action.payload, ...state}
+            state = Object.assign(state, action.payload)
         }
     }
 })
 
-export const {addCache} = searchSlice.actions
+export const { addCache } = searchSlice.actions
 export default searchSlice.reducer
