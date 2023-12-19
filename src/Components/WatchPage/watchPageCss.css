@@ -30,3 +30,16 @@
     border-radius: 50%;
     border: 1px solid white;
 }
+
+.commentStructure{
+    display:flex;
+    background-color: rgba(141, 140, 140, 0.098);
+}
+
+.reply{
+    cursor: pointer;
+}
+
+.reply:hover{
+    color: rgba(108, 104, 104, 0.817);
+}
