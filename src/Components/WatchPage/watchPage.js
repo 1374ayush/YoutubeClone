@@ -6,13 +6,16 @@ import "./watchPageCss.css"
 import axios from "axios";
 import { YoutubeKey } from "../../constants/youtubeAPI";
 import CommentContainer from "./commentsContainer.js";
+import LiveChat from "./liveChat.js";
 
 const WatchPage = () => {
-    let [searchParams] = useSearchParams()
-    const dispatch = useDispatch()
+    let [searchParams] = useSearchParams();
+    const dispatch = useDispatch();
+    const [openComment, setOpenComment] = useState(true);
 
     const [videos, setVideos] = useState([]);
     const [video1, setVideo1] = useState();
+    const [chatMessage, setChatMessage] = useState();
 
     useEffect(() => {
         axios.get(YoutubeKey).then((response) => {
@@ -30,13 +33,16 @@ const WatchPage = () => {
         }
     }, [videos, searchParams]);
 
-
-    console.log(video1)
-
-
     useEffect(() => {
         dispatch(closeMenu());
     }, []);
+
+    const OpenComment = () =>{
+        console.log("Ayush is here...")
+        let comment = !openComment
+        console.log(comment)
+        setOpenComment(comment)
+    }
 
     if (video1 == null) return (<><h1>Lodaing...</h1></>)
     return (
@@ -63,12 +69,18 @@ const WatchPage = () => {
                             <button className="moreBtn mx-3">...</button>
                         </div>
                     </div>
-                    <div className="my-4">
+                    <h5 className="my-2 fw-medium reply" onClick={() => OpenComment()}>Comments...</h5>
+                   { openComment && <div className="my-2">
                         <CommentContainer />
-                    </div>
+                    </div> }
                 </div>
-                <div className="col-12 col-md-5 col-sm-12 comment-border">
-                    <h5>Suggestions:</h5>
+                <div className="col-12 col-md-5 col-sm-12">
+                    <h5>Live Chat :</h5>
+                    <LiveChat />
+                    <div className="p-3 border" >
+                        <input type='text' style={{width:'20rem', borderRadius:'20px', border:'1px solid gray'}}/>
+                        <span className="fs-3"> &#8511; </span>
+                    </div>
                 </div>
             </div>
 

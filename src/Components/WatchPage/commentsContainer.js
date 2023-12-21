@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import person from "../../images/person.png";
+import "./watchPageCss.css"
 
 const commentList = [
     {
@@ -63,12 +64,12 @@ const Comment = ({ data, key, setReply, stateVar}) => {
     }
 
     return (
-        <div className="commentStructure rounded mb-2 p-1" key={key}>
-            <img src={person} className="navImg mx-2 mt-1" />
+        <div className="commentStructure rounded mb-2 p-1 " key={key}>
+            <img src={person} className="navImg mx-2 mt-1 rounded" />
             <div>
                 <p className="m-0 fw-bold">{data.name}</p>
                 <p className="m-0">{data.comment}</p>
-                {data.replies.length != 0 && <p className="fw-bold reply" style={{cursor:'pointer'}} onClick={() => replyActive()} >reply...</p>}
+                {data.replies.length !== 0 && <p className="fw-medium fs-6 reply m-0" style={{cursor:'pointer'}} onClick={() => replyActive()} >reply...</p>}
             </div>
         </div>
     )
@@ -98,7 +99,6 @@ const CommentContainer = () => {
 
     return (
         <>
-            <h4>Comments :</h4>
             <AllComment list={commentList} />
         </>
     )
