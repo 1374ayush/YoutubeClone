@@ -44,3 +44,9 @@
     display: flex;
     background-color: rgba(128, 128, 128, 0.063);
 }
+
+.liveChatButton{
+    border-radius: 6px;
+    background-color: rgba(42, 79, 134, 0.459);
+    color:white;
+}

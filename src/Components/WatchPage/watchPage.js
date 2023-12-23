@@ -7,6 +7,7 @@ import axios from "axios";
 import { YoutubeKey } from "../../constants/youtubeAPI";
 import CommentContainer from "./commentsContainer.js";
 import LiveChat from "./liveChat.js";
+import { addChat } from "../../utils/liveChatSlice.js";
 
 const WatchPage = () => {
     let [searchParams] = useSearchParams();
@@ -17,6 +18,7 @@ const WatchPage = () => {
     const [video1, setVideo1] = useState();
     const [chatMessage, setChatMessage] = useState();
 
+    console.log(chatMessage)
     useEffect(() => {
         axios.get(YoutubeKey).then((response) => {
             console.log(response.data.items);
@@ -38,10 +40,18 @@ const WatchPage = () => {
     }, []);
 
     const OpenComment = () =>{
-        console.log("Ayush is here...")
+        //console.log("Ayush is here...")
         let comment = !openComment
         console.log(comment)
         setOpenComment(comment)
+    }
+
+    const chatSubmit = () =>{
+        console.log("hello hi ji")
+        dispatch(addChat({
+            name:"God",
+            message:chatMessage
+        }))
     }
 
     if (video1 == null) return (<><h1>Lodaing...</h1></>)
@@ -78,8 +88,8 @@ const WatchPage = () => {
                     <h5>Live Chat :</h5>
                     <LiveChat />
                     <div className="p-3 border" >
-                        <input type='text' style={{width:'20rem', borderRadius:'20px', border:'1px solid gray'}}/>
-                        <span className="fs-3"> &#8511; </span>
+                        <input type='text' style={{width:'20rem', borderRadius:'8px', border:'1px solid gray', paddingLeft:'4px'}} placeholder="live chat here..."  onChange={(e)=>setChatMessage(e.target.value)}/>
+                        <button className="mx-2 liveChatButton" onClick={()=>chatSubmit()}>chat</button>
                     </div>
                 </div>
             </div>

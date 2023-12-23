@@ -21,6 +21,18 @@ const LiveChat = () =>{
     const dispatch = useDispatch();
     const chatList = useSelector((store) => store.liveChat.message)
 
+    const randomVal = () =>{
+        const max=9, min=0;
+        const randomDecimal = Math.random();
+        const randomNumber = Math.floor(min + randomDecimal * (max - min));
+
+        console.log(randomNumber)
+        
+        const nameArray=["Dog@123", "Cat", "Lion", "Eagle@343", "bear", "Horse@12", "##Tiger", "Cheetah09", "DonkeyGG", "Monkey"]
+        return nameArray[randomNumber];
+    }
+
+
     //Performing Api polling.
     useEffect(()=>{
         
@@ -30,8 +42,8 @@ const LiveChat = () =>{
 
             dispatch(addChat({
                 //we have to put the API data...
-                name:"Ayush",
-                message:"I have a lot work to do."
+                name:randomVal(),
+                message:"I have a lot work to do. "
             }))
 
         } , 2000)
